@@ -32,6 +32,7 @@ fn main() {
     let env_path: String = env::var(env_key).unwrap();
     println!("env: {}", env_path);
 
+
     // Directories
     let paths: [&str; 3] = [".cargo", ".vscode", "."]; // Directory paths
 
@@ -46,9 +47,9 @@ fn main() {
     // Files path to files containing the content
     // That will be written to the new files
     let file_paths: [&str; 3] = [
-        &format!("{}{}", env_path.as_str(), "../config_files/files/cargo_files/"),
-        &format!("{}{}", env_path.as_str(), "../config_files/files/vs_files/"),
-        &format!("{}{}", env_path.as_str(), "../config_files/workdir_files/"),
+        &format!("{}{}", env_path.as_str(), ".\\config_files\\cargo_files\\"),
+        &format!("{}{}", env_path.as_str(), ".\\config_files\\vs_files\\"),
+        &format!("{}{}", env_path.as_str(), ".\\config_files\\workdir_files\\"),
     ];
 
     let mut content = String::new(); // Temporary variable used to share content between files.
